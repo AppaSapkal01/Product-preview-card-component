@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ### Primary */
+
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* ### Neutral */
+
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    background-color: var(--Cream);
+    font-family: 'Fraunces', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.card {
+    max-width: 650px;
+    margin: 0 1rem;
+    background-color: var(--White);
+    display: flex;
+    border-radius: 10px;
+}
+
+.images {
+    width: 50%;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.text {
+    width: 50%;
+    padding: 2rem;
+}
+
+p {
+    font-size: 14px;
+}
+
+.product-category {
+    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Dark-grayish-blue);
+}
+
+h1 {
+    padding-right: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--Very-dark-blue);
+}
+
+.product-details {
+    padding-bottom: 1.5rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    line-height: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Dark-grayish-blue);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
+}
+
+.prices-updated {
+    font-size: 2rem;
+    color: var(--Dark-cyan);
+}
+
+.prices-previous {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--Very-dark-blue);
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .images {
+        width: 100%;
+        height: 40%;
+    }
+
+    .images img {
+        content: url("images/image-product-mobile.jpg");
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .text {
+        padding-right: auto;
+        width: 100%;
+    }
+
+}
